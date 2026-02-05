@@ -3,10 +3,8 @@ FROM $BUILD_FROM
 
 RUN apk add python3 py3-pip git
 
-RUN pip3 install --upgrade pip
-
 RUN git clone https://github.com/kk7ds/pynx584
-RUN pip3 install pynx584/
+RUN pip3 install --break-system-packages pynx584/
 
 # Verify python installation
 RUN which python3

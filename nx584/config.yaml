@@ -1,5 +1,5 @@
-name: "NX-584"
-description: "Interface to GE/CaddX/NetworkX alarm systems via NX-584/NX8E"
+name: "NX584 Server"
+description: "Interface to GE/CaddX/NetworX alarm systems via NX-584/NX8E (serial support)"
 version: "1.0.0"
 slug: "nx584"
 init: false
@@ -9,5 +9,14 @@ arch:
   - armhf
   - armv7
   - i386
+startup: application
+boot: auto
+url: "https://github.com/rbattstuff/nx584"  # Replace with your actual GitHub username/fork if different
 ports:
   5007/tcp: 5007
+ports_description:
+  5007/tcp: "NX584 server port"
+devices:
+  - /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AH02BNE7-if00-port0:/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AH02BNE7-if00-port0:rwm
+map:
+  - config:rw

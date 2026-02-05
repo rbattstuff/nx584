@@ -17,6 +17,6 @@ ports:
 ports_description:
   5007/tcp: "NX584 server port"
 devices:
-  - /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AH02BNE7-if00-port0:/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AH02BNE7-if00-port0:rwm
+  - /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AH02BNE7-if00-port0
 map:
   - config:rw
